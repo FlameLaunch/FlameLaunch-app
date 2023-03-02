@@ -22,13 +22,13 @@
         <div
           class=" text-[10px] md:text-[9px] md:leading-[21px]  leading-[23px]  md:w-[698px]  lg:text-[16px] lg:leading-[38px] text-white opacity-50 lg:ml-[80px] break-all">
           Based on the FILECOIN ecological integration of Internet social graphs
-            and on-chain asset data, it has the functions of screening, rating,
-            and self-adaptation; the FLAME launch platform allows activities
-            such as issuing IDOs, whitelists, and interactive tasks, and uses DIDs
-            to notarize the timeliness records of project parties and mark user
-            portrait, To achieve a more credible market environment and a fairer
-            trading mechanism.Ensuring participants receive full transparency of
-            security and protection protocols.
+          and on-chain asset data, it has the functions of screening, rating,
+          and self-adaptation; the FLAME launch platform allows activities
+          such as issuing IDOs, whitelists, and interactive tasks, and uses DIDs
+          to notarize the timeliness records of project parties and mark user
+          portrait, To achieve a more credible market environment and a fairer
+          trading mechanism.Ensuring participants receive full transparency of
+          security and protection protocols.
         </div>
       </div>
 
@@ -171,8 +171,8 @@
               </div>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSexsQ5MEjgIjKuTIfidqKol8JdM1Kf4QDzHDdFgHa7CQSmDow/viewform?usp=sf_link"
                 target="_blank" rel="noopener noreferrer">
-              <div class="mt-[24px] h-[36px] text-center leading-[36px] text-[16px]  bg-gold bg-opacity-10 text-gold">
-                Apply for IDO</div>
+                <div class="mt-[24px] h-[36px] text-center leading-[36px] text-[16px]  bg-gold bg-opacity-10 text-gold">
+                  Apply for IDO</div>
               </a>
             </div>
           </div>
@@ -205,7 +205,7 @@
           </div>
 
 
-          
+
 
           <div class=" rounded-[14px] w-full overflow-hidden cursor-pointer">
             <img src="~assets/imgs/project1.png" alt="" srcset="">
@@ -241,44 +241,41 @@
           <div class="text-active text-[14px] mb-[22px]"><span>Backed by the best</span></div>
           <div class="bg-card rounded-[16px] overflow-hidden px-[55px] py-[81px] box-border grid grid-cols-1 gap-[80px]">
 
-            <div class="grid grid-cols-5 gap-[80px] h-[56px]">
-              <a href="https://ipfs.tech/" target="_blank" rel="noopener noreferrer">
-                <img class="h-[56px] " src="~assets/logos/ipfs.png" alt="" srcset="">
-              </a>
 
-              <a href="https://www.lens.xyz/" target="_blank" rel="noopener noreferrer">
-                <img class="h-[56px] " src="~assets/logos/aws.png" alt="" srcset="">
-              </a>
+            <a href="https://ipfs.tech/" target="_blank" rel="noopener noreferrer">
+              <img src="~assets/logos/ipfs.png" alt="" srcset="">
+            </a>
 
-              <a href="https://chain.link/" target="_blank" rel="noopener noreferrer">
-                <img class="h-[56px] " src="~assets/logos/lens.png" alt="" srcset="">
-              </a>
+            <a href="https://www.lens.xyz/" target="_blank" rel="noopener noreferrer">
+              <img src="~assets/logos/aws.png" alt="" srcset="">
+            </a>
 
-              <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-                <img src="~assets/logos/thegraph.png" alt="" srcset="">
-              </a>
+            <a href="https://chain.link/" target="_blank" rel="noopener noreferrer">
+              <img src="~assets/logos/lens.png" alt="" srcset="">
+            </a>
 
-              <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-                <img src="~assets/logos/safe.png" alt="" srcset="">
-              </a>
-            </div>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
+              <img src="~assets/logos/thegraph.png" alt="" srcset="">
+            </a>
 
+            <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
+              <img src="~assets/logos/safe.png" alt="" srcset="">
+            </a>
 
-            <div class="grid grid-cols-4 gap-[80px] h-[56px]">
-              <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-                <img src="~assets/logos/chainlink.png" alt="" srcset="">
-              </a>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
+              <img src="~assets/logos/chainlink.png" alt="" srcset="">
+            </a>
 
-              <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-                <img src="~assets/logos/dune.png" alt="" srcset="">
-              </a>
-              <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-                <img src="~assets/logos/coingecko.png" alt="" srcset="">
-              </a>
-              <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-                <img src="~assets/logos/coinmarketcap.png" alt="" srcset="">
-              </a>
-            </div>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
+              <img src="~assets/logos/dune.png" alt="" srcset="">
+            </a>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
+              <img src="~assets/logos/coingecko.png" alt="" srcset="">
+            </a>
+            <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
+              <img src="~assets/logos/coinmarketcap.png" alt="" srcset="">
+            </a>
+
 
 
           </div>
@@ -331,4 +328,5 @@ export default {
   background: linear-gradient(270deg, #916BC8 0%, #2CB6F4 52%, #7EDC75 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}</style>
+}
+</style>
