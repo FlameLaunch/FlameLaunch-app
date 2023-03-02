@@ -242,37 +242,37 @@
           <div class="bg-card rounded-[16px] w-full h-auto overflow-hidden px-[26px] py-[34px] md:px-[55px] md:py-[81px] box-border grid  gap-[34px] md:-[80px]  grid-rows-5 md:grid-rows-2 grid-flow-col">
 
             <a href="https://ipfs.tech/" target="_blank" rel="noopener noreferrer">
-              <img class="w-[100%]" src="~assets/logos/ipfs.png" alt="" srcset="">
+              <img class="h-[31px] md:h-[56px]" src="~assets/logos/ipfs.png" alt="" srcset="">
             </a>
 
             <a href="https://www.lens.xyz/" target="_blank" rel="noopener noreferrer">
-              <img class="w-[100%]" src="~assets/logos/aws.png" alt="" srcset="">
+              <img class="h-[31px] md:h-[56px]" src="~assets/logos/aws.png" alt="" srcset="">
             </a>
 
             <a href="https://chain.link/" target="_blank" rel="noopener noreferrer">
-              <img class="w-[100%]" src="~assets/logos/lens.png" alt="" srcset="">
+              <img class="h-[31px] md:h-[56px]" src="~assets/logos/lens.png" alt="" srcset="">
             </a>
 
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img class="w-[100%]" src="~assets/logos/thegraph.png" alt="" srcset="">
+              <img class="h-[31px] md:h-[56px]" src="~assets/logos/thegraph.png" alt="" srcset="">
             </a>
 
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img class="w-[100%]" src="~assets/logos/safe.png" alt="" srcset="">
+              <img class="h-[31px] md:h-[56px]" src="~assets/logos/safe.png" alt="" srcset="">
             </a>
 
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img class="w-[100%]" src="~assets/logos/chainlink.png" alt="" srcset="">
+              <img class="h-[31px] md:h-[56px]" src="~assets/logos/chainlink.png" alt="" srcset="">
             </a>
 
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img class="w-[100%]" src="~assets/logos/dune.png" alt="" srcset="">
+              <img class="h-[31px] md:h-[56px]" src="~assets/logos/dune.png" alt="" srcset="">
             </a>
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img class="w-[100%]" src="~assets/logos/coingecko.png" alt="" srcset="">
+              <img class="h-[31px] md:h-[56px]" src="~assets/logos/coingecko.png" alt="" srcset="">
             </a>
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img class="w-[100%]" src="~assets/logos/coinmarketcap.png" alt="" srcset="">
+              <img class="h-[31px] md:h-[56px]" src="~assets/logos/coinmarketcap.png" alt="" srcset="">
             </a>
           </div>
         </div>
