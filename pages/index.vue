@@ -235,49 +235,45 @@
         </div>
 
 
-
+       
         <div class="md:mb-[174px] mb-[80px]">
           <div class="text-[28px] font-bold  text-white">Partners</div>
           <div class="text-active text-[14px] mb-[22px]"><span>Backed by the best</span></div>
-          <div class="bg-card rounded-[16px] overflow-hidden px-[55px] py-[81px] box-border grid grid-cols-1 gap-[80px]">
-
+          <div class="bg-card rounded-[16px] w-full h-auto overflow-hidden px-[26px] py-[34px] md:px-[55px] md:py-[81px] box-border grid  gap-[34px] md:-[80px]  grid-rows-5 md:grid-rows-2 grid-flow-col">
 
             <a href="https://ipfs.tech/" target="_blank" rel="noopener noreferrer">
-              <img src="~assets/logos/ipfs.png" alt="" srcset="">
+              <img class="w-[100%]" src="~assets/logos/ipfs.png" alt="" srcset="">
             </a>
 
             <a href="https://www.lens.xyz/" target="_blank" rel="noopener noreferrer">
-              <img src="~assets/logos/aws.png" alt="" srcset="">
+              <img class="w-[100%]" src="~assets/logos/aws.png" alt="" srcset="">
             </a>
 
             <a href="https://chain.link/" target="_blank" rel="noopener noreferrer">
-              <img src="~assets/logos/lens.png" alt="" srcset="">
+              <img class="w-[100%]" src="~assets/logos/lens.png" alt="" srcset="">
             </a>
 
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img src="~assets/logos/thegraph.png" alt="" srcset="">
+              <img class="w-[100%]" src="~assets/logos/thegraph.png" alt="" srcset="">
             </a>
 
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img src="~assets/logos/safe.png" alt="" srcset="">
+              <img class="w-[100%]" src="~assets/logos/safe.png" alt="" srcset="">
             </a>
 
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img src="~assets/logos/chainlink.png" alt="" srcset="">
+              <img class="w-[100%]" src="~assets/logos/chainlink.png" alt="" srcset="">
             </a>
 
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img src="~assets/logos/dune.png" alt="" srcset="">
+              <img class="w-[100%]" src="~assets/logos/dune.png" alt="" srcset="">
             </a>
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img src="~assets/logos/coingecko.png" alt="" srcset="">
+              <img class="w-[100%]" src="~assets/logos/coingecko.png" alt="" srcset="">
             </a>
             <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
-              <img src="~assets/logos/coinmarketcap.png" alt="" srcset="">
+              <img class="w-[100%]" src="~assets/logos/coinmarketcap.png" alt="" srcset="">
             </a>
-
-
-
           </div>
         </div>
       </div>
@@ -309,6 +305,9 @@ export default {
 </script>
 
 <style scoped>
+
+
+
 .launchBrand {
   background: radial-gradient(circle at 50%, #634C9C, #323976);
 }

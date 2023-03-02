@@ -219,8 +219,8 @@ export default {
               icon: require("@/assets/imgs/Support.png"),
               dsc: "Read to better understand core concepts or ideas.",
               link: {
-                href: "https://github.com/FlameLaunch/White-Paper.git",
-                type: "url"
+                href: "/pdf",
+                type: "router"
               }
             },
           ],
@@ -331,6 +331,9 @@ export default {
         this.$el
           .querySelector(e.href)
           .scrollIntoView({ block: "start", behavior: "smooth" });
+      }
+      if (e.type == "router") {
+      this.$router.push({path:e.href});
       }
     },
     handleScroll() {
