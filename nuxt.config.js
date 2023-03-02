@@ -1,4 +1,5 @@
 const path = require('path')
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -47,12 +48,25 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/i18n',
   ],
+  i18n: {
+    /* module options */
+    locales: [{
+      code: 'en',
+      file: 'en.js'
+    }, {
+      code: 'zh',
+      file: 'zh.js'
+    }],
+    langDir: 'lang/',
+    defaultLocale: 'en'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
-    extend (config, ctx) {
+    extend(config, ctx) {
       // ...
       const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
       svgRule.exclude = [path.resolve(__dirname, 'assets/svg')]

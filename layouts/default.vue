@@ -35,10 +35,13 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="flex flex-row items-center text-white">
+        <img @click="lang" class="w-[50px] mr-[20px] cursor-pointer active:opacity-70" src="~assets/imgs/switch.png"
+          alt="">
+
         <div @click="get()" v-if="address == '' || address == undefined || address == null"
           class="cursor-pointer px-[16px] py-[18px]  bg-white text-btnText rounded-[12px] text-[16px]  font-medium hover:bg-gray-100 active:opacity-70">
-          Connect Wallet
+          {{ $t('connectWallet') }}
 
         </div>
         <div v-else
@@ -53,15 +56,22 @@
     <div class="px-6 pb-8 mt-10 flex flex-row justify-between  items-center w-full box-border lg:hidden">
       <svg-icon class="w-24 h-10" icon-class="logo" />
       <div class="flex flex-row items-center">
-        <div  @click="get()" v-if="address == '' || address == undefined || address == null"
+        <img @click="lang" class="h-9 mr-3.5 cursor-pointer active:opacity-70" src="~assets/imgs/switch.png"
+          alt="">
+        <div @click="get()" v-if="address == '' || address == undefined || address == null"
           class="  mainColor  hover:bg-gray-100  box-border  bg-white w-36  h-9 rounded-lg text-base flex flex-row  items-center justify-center mr-3.5">
           Connect Wallet
         </div>
-        <div  v-else
+        <div v-else
           class="  mainColor  hover:bg-gray-100  box-border  bg-white w-36  h-9 rounded-lg text-base flex flex-row  items-center justify-center mr-3.5">
           {{ address | subAccount }}
         </div>
-        <img @click="drawer = true" class="w-9 h-9" src="@/assets/imgs/menu.png" alt="" />
+
+        <div class="flex flex-row items-center">
+         
+          <img @click="drawer = true" class="w-9 h-9" src="@/assets/imgs/menu.png" alt="" />
+        </div>
+       
       </div>
     </div>
 
@@ -71,9 +81,9 @@
     <div class="  bg-gradient-to-r  from-from to-to">
       <div class=" container  pt-[50px] px-[20px] box-border grid grid-cols-1 md:grid-cols-2 relative">
         <div class="flex flex-col  justify-center md:h-[378px]">
-          <div class="text-active text-[14px] mb-[20px]"><span>Blockchain entrepreneurship artifact</span></div>
+          <div class="text-active text-[14px] mb-[20px]"><span> {{ $t('block') }}</span></div>
           <div class="text-[36px]  font-bold text-white ">
-            Achieve great things with flame launch
+            {{ $t('achieve') }}
           </div>
         </div>
         <div class="w-full">
@@ -90,7 +100,7 @@
               <img class="h-[40.05px]" src="@/assets/imgs/Filecoin-logo.png" alt="" />
             </div>
             <div class="slogon text-tip mt-[21px]">
-              A fully decentralized protocol for publishing new ideas
+              {{ $t('idea') }}
             </div>
           </div>
           <div class=" text-white footerMenuRight  w-full flex flex-row justify-center ">
@@ -144,8 +154,9 @@
               @click="drawer = false"> </div>
         </div>
         <div class="box-border px-10   " style="color: #8C9CBA;">
-          <div class="relative mb-16" v-for="(item, index) in navItem" :key="index" >
-            <div class="w-full flex flex-row justify-between  text-xl items-center " @click="open(item,index, item.state)">
+          <div class="relative mb-16" v-for="(item, index) in navItem" :key="index">
+            <div class="w-full flex flex-row justify-between  text-xl items-center "
+              @click="open(item, index, item.state)">
               <div class="">{{ item.name }}</div>
               <div> <span class="iconfont icon-jiantou_liebiaoxiangyou"></span></div>
             </div>
@@ -156,8 +167,8 @@
                 v-if="item.children.length > 0 && item.state">
                 <div class="rounded-lg h-28 w-full box-border  flex flex-row justify-between items-center"
                   style="background-color: #161B28;padding: 1.67rem;" v-for="(ele, idx) in item.children
-                                                  " :key="idx" @click="openLink(ele.link)"
-                  v-bind:style="{ backgroundColor: activeColor }" >
+                                                      " :key="idx" @click="openLink(ele.link)"
+                  v-bind:style="{ backgroundColor: activeColor }">
                   <div class="flex flex-row  items-center ">
                     <div class="h-full rounded-lg flex flex-row justify-center items-center mr-8"
                       style="background-color: #1D2331;width: 3.67rem;height: 3.67rem;">
@@ -195,45 +206,64 @@ export default {
       topBannerNavBg: {
         backgroundColor: ''
       },
-   
 
-      navItem: [
+
+
+      activeColor: '',
+    };
+  },
+  filters: {
+    subAccount(val) {
+      return val.substring(0, 4) + "***" + val.substring(val.length - 5)
+    }
+  },
+  created() {
+
+
+  },
+  computed: {
+    address() {
+      return this.$store.state.userId
+    },
+    navItem() {
+      let self = this
+      return [
         {
-          name: "Resources",
+          name: self.$t('resources'),
           link: false,
           state: false,
           children: [
             {
-              name: "Blog",
+              name: self.$t('blog'),
               state: false,
               icon: require("@/assets/imgs/Blog.png"),
-              dsc: "Read and learn about blockchain.",
+              dsc: this.$t('blogDsc'),
               link: {
                 href: "https://medium.com/@FlameLaunch",
                 type: "url"
               }
             },
             {
-              name: "White paper",
+              name: this.$t('whitepaper'),
               state: false,
               icon: require("@/assets/imgs/Support.png"),
-              dsc: "Read to better understand core concepts or ideas.",
+              dsc: this.$t('whitepaperDsc'),
               link: {
-                href: "/pdf",
-                type: "router"
+                href: "https://flamelaunch.github.io/White-Paper/FLAME-Launch-whitepaper.en.pdf",
+                type: "url"
               }
             },
           ],
         },
         {
-          name: "Community",
+          name: this.$t('community'),
           state: false,
           children: [
             {
               name: "Twitter",
               state: false,
               icon: require("@/assets/imgs/Twitter.png"),
-              dsc: "Stay up-to-date with Flame-launch's new features and projects.",
+              dsc: this.$t('twitter'),
               link: {
                 href: "https://twitter.com/FlameLaunch",
                 type: "url"
@@ -243,7 +273,7 @@ export default {
               name: "Discord",
               state: false,
               icon: require("@/assets/imgs/Discord.png"),
-              dsc: "Become part of our community and chat away!",
+              dsc: this.$t('discord'),
               link: {
                 href: "https://discord.gg/7VsNUcavBw",
                 type: "url"
@@ -253,7 +283,7 @@ export default {
               name: "Telegram",
               state: false,
               icon: require("@/assets/imgs/Telegram.png"),
-              dsc: "Meet the community and get live support from mods.",
+              dsc: this.$t('telegram'),
               link: {
                 href: "https://t.me/FlameLaunch",
                 type: "url"
@@ -262,7 +292,7 @@ export default {
           ],
         },
         {
-          name: "Launch with Flame",
+          name: this.$t('withLaunch'),
           state: false,
           children: [],
           link: {
@@ -270,49 +300,47 @@ export default {
             type: "label"
           }
         },
-      ], activeColor: '',
-    };
-  },
-  filters: {
-    subAccount(val) {
-      return val.substring(0, 4) + "***" + val.substring(val.length - 5)
-    }
-  },
-  created() { },
-  computed: {
-    address() {
-      return this.$store.state.userId
+
+      ]
     }
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
-    open(item,index,state){
-      if(item.children.length>0){
-       
-        for (let i = 0; i < this.navItem.length; i++) {
-        const element = this.navItem[i];
-        if (i == index) {
-          console.log(1111)
-          this.navItem[i].state = !state
-        } else {
-          this.navItem[i].state = false
-        }
+    lang() {
+      console.log(this.$i18n.locale)
+      if (this.$i18n.locale == "zh") {
+        this.$i18n.locale = "en"
+      } else {
+        this.$i18n.locale = "zh"
       }
-      }else{
-        if(item.link.type=="label"){
+    },
+    open(item, index, state) {
+      if (item.children.length > 0) {
+
+        for (let i = 0; i < this.navItem.length; i++) {
+          const element = this.navItem[i];
+          if (i == index) {
+            console.log(1111)
+            this.navItem[i].state = !state
+          } else {
+            this.navItem[i].state = false
+          }
+        }
+      } else {
+        if (item.link.type == "label") {
 
           this.$el
-          .querySelector(item.link.href)
-          .scrollIntoView({ block: "start", behavior: "smooth" });
-          this.drawer=false
-        }else{
+            .querySelector(item.link.href)
+            .scrollIntoView({ block: "start", behavior: "smooth" });
+          this.drawer = false
+        } else {
           console.log(item.link.href)
           window.open(item.link.href, '_blank');
         }
       }
-      
+
     },
     get() {
       this.$store.dispatch('connectWallet')
@@ -333,7 +361,7 @@ export default {
           .scrollIntoView({ block: "start", behavior: "smooth" });
       }
       if (e.type == "router") {
-      this.$router.push({path:e.href});
+        this.$router.push({ path: e.href });
       }
     },
     handleScroll() {
