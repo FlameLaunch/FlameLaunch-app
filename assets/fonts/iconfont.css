@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3897948 */
+  src: url('iconfont.woff2?t=1677474160132') format('woff2'),
+       url('iconfont.woff?t=1677474160132') format('woff'),
+       url('iconfont.ttf?t=1677474160132') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-daojishi:before {
+  content: "\e671";
+}
+
+.icon-filecoin-fil-logo:before {
+  content: "\e616";
+}
+
+.icon-a-FilecoinFIL:before {
+  content: "\e6e8";
+}
+
+.icon-gantanhao-quan:before {
+  content: "\e70f";
+}
+
+.icon-jiantou_liebiaoxiangyou:before {
+  content: "\eb05";
+}
+
+.icon-youjiantou:before {
+  content: "\e600";
+}
+
+.icon-duihao:before {
+  content: "\eaf1";
+}
+
+.icon-guanbi:before {
+  content: "\eaf2";
+}
+
+.icon-jiantou_liebiaoshouqi:before {
+  content: "\eb03";
+}
+
+.icon-jiantou_liebiaozhankai:before {
+  content: "\eb04";
+}
+
+.icon-bofang_o:before {
+  content: "\eb5e";
+}
+

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{
+    font-size:12px;
+    background: #0b121e;
+}
+input {
+    outline: none;
+    background: transparent;
+    border: none;
+    outline: medium;
+  
+    height: 50px;
+  }
+  
+  input:focus {
+    outline: none;
+    background-color: transparent;
+  }
+  
+  ::selection {
+    background: transparent;
+  }
+  
+  ::-moz-selection {
+    background: rgb(241, 241, 241);
+  }
