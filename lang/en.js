@@ -26,7 +26,7 @@ export default {
   understand: "Learn about Flame launch",
   viewBlogs: "Explore our Blog",
   understandItem1: "How to participate in FLAME LAUNCH IDO?",
-  understandItem1Dsc: `Come to the FLAME LAUNCH to realize your dream of encrypting the world`,
+  understandItem1Dsc: `FLAME LAUNCH will be the first DeFi launchpad on Fusion. We look forward to having more projects join us!`,
   understandItem2: "FLAME LAUNCH Introduction",
   understandItem3: "Simple for Beginnersintroduce",
   apply: "Apply for IDO",
@@ -40,8 +40,7 @@ export default {
     resistant to censorship, fraud, and other forms of manipulation.
   `,
   metaverse: `
-  Metaverse is a digital life space with a new social system, built by humans using digital technology,
-  mapping or transcending the real world and interacting with it.
+  SocialFi is a social media management tool that can help you quickly, safely and effectively manage all your social media accounts. It can help you more easily publish, track, analyze and manage all your social media activities. It allows you to view forwarding, comments, compliments and other activities in one place to help you better understand customer feedback and effectively improve your social media strategy.
 `,
   partner: "Partners",
   partnerDsc: "Backed by the best",
@@ -59,4 +58,5 @@ export default {
   discord: "Become part of our community and chat away!",
   telegram: "Meet the community and get live support from mods.",
   withLaunch: "Launch with Flame",
+  lang:"Language"
 }

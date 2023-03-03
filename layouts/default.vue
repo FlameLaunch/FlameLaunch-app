@@ -36,8 +36,8 @@
         </div>
       </div>
       <div class="flex flex-row items-center text-white">
-        <img @click="lang" class="w-[50px] mr-[20px] cursor-pointer active:opacity-70" src="~assets/imgs/switch.png"
-          alt="">
+        <!-- <img @click="lang" class="w-[50px] mr-[20px] cursor-pointer active:opacity-70" src="~assets/imgs/switch.png"
+          alt=""> -->
 
         <div @click="get()" v-if="address == '' || address == undefined || address == null"
           class="cursor-pointer px-[16px] py-[18px]  bg-white text-btnText rounded-[12px] text-[16px]  font-medium hover:bg-gray-100 active:opacity-70">
@@ -56,11 +56,10 @@
     <div class="px-6 pb-8 mt-10 flex flex-row justify-between  items-center w-full box-border lg:hidden">
       <svg-icon class="w-24 h-10" icon-class="logo" />
       <div class="flex flex-row items-center">
-        <img @click="lang" class="h-9 mr-3.5 cursor-pointer active:opacity-70" src="~assets/imgs/switch.png"
-          alt="">
+
         <div @click="get()" v-if="address == '' || address == undefined || address == null"
           class="  mainColor  hover:bg-gray-100  box-border  bg-white w-36  h-9 rounded-lg text-base flex flex-row  items-center justify-center mr-3.5">
-          Connect Wallet
+          {{ $t('connectWallet') }}
         </div>
         <div v-else
           class="  mainColor  hover:bg-gray-100  box-border  bg-white w-36  h-9 rounded-lg text-base flex flex-row  items-center justify-center mr-3.5">
@@ -68,10 +67,9 @@
         </div>
 
         <div class="flex flex-row items-center">
-         
           <img @click="drawer = true" class="w-9 h-9" src="@/assets/imgs/menu.png" alt="" />
         </div>
-       
+
       </div>
     </div>
 
@@ -143,31 +141,33 @@
       </div>
 
       <div class=" border-t border-gray-500 text-center text-gray-500 py-7 mt-20 text-base">
-        © 2021 - 2022 | All Rights Reserved - FlameLaunch
+        © 2022 - 2023 | All Rights Reserved - FlameLaunch
       </div>
     </div>
-    <el-drawer style=" background-color: #0b121e" custom-class="menuMobile" title="我是标题" direction="ltr" size="100%"
-      :show-close="showClose" :visible.sync="drawer" :with-header="false">
-      <div class="h-full bg-black pt-20 box-border " style="height: 100%;">
-        <div class=" px-6  mb-10">
-          <div class="w-full flex flex-row justify-end"> <img class="w-10" src="~assets/imgs/menu.png" alt=""
-              @click="drawer = false"> </div>
+    <el-drawer custom-class="menuMobile" title="我是标题" direction="ltr" size="100%" :show-close="showClose"
+      :visible.sync="drawer" :with-header="false">
+      <div class="min-h-screen   overflow-hidden bg-black pt-20 box-border ">
+        <div class=" px-6  mb-10 flex flex-row justify-between items-center ml-2">
+          <!-- <img @click="lang" class="w-[20px] cursor-pointer active:opacity-70" src="~assets/imgs/switch.png" alt=""> -->
+          <div class=" flex flex-row justify-end">
+            <img class="w-10" src="~assets/imgs/menu.png" alt="" @click="drawer = false">
+          </div>
         </div>
         <div class="box-border px-10   " style="color: #8C9CBA;">
-          <div class="relative mb-16" v-for="(item, index) in navItem" :key="index">
-            <div class="w-full flex flex-row justify-between  text-xl items-center "
-              @click="open(item, index, item.state)">
-              <div class="">{{ item.name }}</div>
-              <div> <span class="iconfont icon-jiantou_liebiaoxiangyou"></span></div>
-            </div>
 
-            <transition name="fade">
-              <div class="w-full box-border rounded-lg "
+          <div class="relative mb-16" v-for="(item, index) in navItem" :key="index">
+            <div class="" @click="open(item, index, item.state)">
+              <div class="w-full flex flex-row justify-between  text-xl items-center">
+                <div class="">{{ item.name }}</div>
+                <div> <span class="iconfont icon-jiantou_liebiaoxiangyou"></span></div>
+              </div>
+
+              <div class="w-full box-border rounded-lg   "
                 style="background-color: #1D2331;padding: 0.83rem;margin-top: 1.67rem;"
-                v-if="item.children.length > 0 && item.state">
+                v-if="item.children.length > 0 && clc.index == index && clc.state">
                 <div class="rounded-lg h-28 w-full box-border  flex flex-row justify-between items-center"
                   style="background-color: #161B28;padding: 1.67rem;" v-for="(ele, idx) in item.children
-                                                      " :key="idx" @click="openLink(ele.link)"
+                                                                      " :key="idx" @click="openLink(ele.link)"
                   v-bind:style="{ backgroundColor: activeColor }">
                   <div class="flex flex-row  items-center ">
                     <div class="h-full rounded-lg flex flex-row justify-center items-center mr-8"
@@ -175,15 +175,15 @@
                       <img class="w-8 h-8" :src="ele.icon" alt="" srcset="">
                     </div>
                     <div>
-                      <div class="text-white text-xl font-medium"></div>
-                      <div class="text-xs">{{ ele.name }}</div>
+                      <div class="text-white text-xl font-medium">{{ ele.name }}</div>
+                      <div class="text-xs">{{ ele.dsc }}</div>
                     </div>
                   </div>
                   <div> <span class="iconfont icon-youjiantou"></span></div>
                 </div>
               </div>
+            </div>
 
-            </transition>
 
           </div>
 
@@ -195,7 +195,7 @@
 </template>
 
 <script>
-
+let self
 
 export default {
   data() {
@@ -206,10 +206,13 @@ export default {
       topBannerNavBg: {
         backgroundColor: ''
       },
-
-
-
       activeColor: '',
+      dis: [],
+      record: {
+        state: false,
+        index: 0
+      }
+
     };
   },
   filters: {
@@ -218,23 +221,24 @@ export default {
     }
   },
   created() {
-
-
+    self = this
   },
   computed: {
     address() {
       return this.$store.state.userId
     },
+    clc() {
+      return this.record
+    },
     navItem() {
-      let self = this
       return [
         {
-          name: self.$t('resources'),
+          name: this.$t('resources'),
           link: false,
           state: false,
           children: [
             {
-              name: self.$t('blog'),
+              name: this.$t('blog'),
               state: false,
               icon: require("@/assets/imgs/Blog.png"),
               dsc: this.$t('blogDsc'),
@@ -250,7 +254,7 @@ export default {
               dsc: this.$t('whitepaperDsc'),
               link: {
                 href: "https://flamelaunch.github.io/White-Paper/FLAME-Launch-whitepaper.en.pdf",
-                type: "url"
+                type: "pdf"
               }
             },
           ],
@@ -300,16 +304,44 @@ export default {
             type: "label"
           }
         },
+        {
+          name: this.$t('lang'),
+          link: false,
+          state: false,
+          children: [
 
+            {
+              name: "English",
+              state: false,
+              icon: require("@/assets/imgs/en.png"),
+              dsc: "",
+              link: {
+                href: "en",
+                type: "lang"
+              }
+            },
+            {
+              name: "简体中文",
+              state: false,
+              icon: require("@/assets/imgs/zh.png"),
+              dsc: "",
+              link: {
+                href: "zh",
+                type: "lang"
+              }
+            },
+          ],
+        },
       ]
     }
   },
+
+
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     lang() {
-      console.log(this.$i18n.locale)
       if (this.$i18n.locale == "zh") {
         this.$i18n.locale = "en"
       } else {
@@ -317,31 +349,38 @@ export default {
       }
     },
     open(item, index, state) {
-      if (item.children.length > 0) {
 
-        for (let i = 0; i < this.navItem.length; i++) {
-          const element = this.navItem[i];
-          if (i == index) {
-            console.log(1111)
-            this.navItem[i].state = !state
-          } else {
-            this.navItem[i].state = false
-          }
+      if (item.children.length > 0) {
+        if (state) {
+          this.record.state = false;
         }
+        if (!state) {
+          this.record.state = true
+        }
+        this.record.index = index
       } else {
         if (item.link.type == "label") {
-
-          this.$el
-            .querySelector(item.link.href)
-            .scrollIntoView({ block: "start", behavior: "smooth" });
+          this.$el.querySelector(item.link.href).scrollIntoView({ block: "start", behavior: "smooth" });
           this.drawer = false
-        } else {
-          console.log(item.link.href)
+        }
+        if (item.link.type == "href") {
           window.open(item.link.href, '_blank');
+        }
+        if (item.link.type == "lang") {
+          this.$i18n.locale = item.link.href
+        }
+        if (item.link.type == "pdf") {
+          if (this.$i18n.locale = "en") {
+            window.open('https://flamelaunch.github.io/White-Paper/FLAME-Launch-whitepaper.en.pdf', '_blank');
+          } else {
+            window.open('https://flamelaunch.github.io/White-Paper/FLAME-Launch-whitepaper.zh.pdf', '_blank');
+          }
         }
       }
 
     },
+
+
     get() {
       this.$store.dispatch('connectWallet')
     },
@@ -352,7 +391,6 @@ export default {
       }
       this.drawer = false
       if (e.type == "url") {
-
         window.open(e.href, '_blank');
       }
       if (e.type == "label") {
@@ -362,6 +400,9 @@ export default {
       }
       if (e.type == "router") {
         this.$router.push({ path: e.href });
+      }
+      if (e.type == "lang") {
+        this.$i18n.locale = e.href
       }
     },
     handleScroll() {

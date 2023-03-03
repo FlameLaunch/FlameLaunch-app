@@ -5,8 +5,7 @@
       <div class="container h-full flex  px-[27px] pb-[50px] box-border md:px-0 flex-wrap-reverse">
         <div class="h-full flex flex-col   justify-center flex-1 md:flex-[0.5]">
           <div class="title text-[36px]  lg:text-[66px]  font-black ">FLAME LAUNCH</div>
-          <div class="lg:mt-[22px] lg:text-[26px] text-tip">Dream Factory of FILECOIN-based Blockchain Ecosystem
-            Applications</div>
+          <div class="lg:mt-[22px] lg:text-[26px] text-tip">{{ $t('topDsc') }}</div>
         </div>
         <div class="w-full h-full flex flex-row   justify-end  items-center mt-[39px] md:flex-[0.5]">
           <img class=" lg:w-[536.36px] " src="~assets/imgs/flame1.gif" alt="" srcset="">
@@ -154,7 +153,7 @@
               <span>Ends with</span> <span>March 14, 2022</span>
             </div> -->
             <div class="bg-card">
-              <div class="pt-[36px] flex flex-row items-center justify-between px-[17px] box-border">
+              <div class="pt-[36px] flex flex-row items-center justify-between px-[17px] box-border ">
                 <div class=" text-white text-[28px] font-medium">Web 3.0</div>
                 <img class="w-[34px] mb-[19px]" src="~assets/imgs/fil.png" alt="" srcset="">
               </div>
@@ -198,13 +197,9 @@
 
           <div class=" rounded-[14px] w-full overflow-hidden cursor-pointer">
             <img src="~assets/imgs/project1.png" alt="" srcset="">
-            <!-- <div
-              class="bg-purple1 bg-opacity-10 text-purple1 h-[30px] px-[17px] flex flex-row items-center justify-between">
-              <span>Ends with</span> <span>March 14, 2022</span>
-            </div> -->
             <div class="bg-card">
               <div class="pt-[36px] flex flex-row items-center justify-between px-[17px] box-border">
-                <div class=" text-white text-[28px] font-medium">Metaverse</div>
+                <div class=" text-white text-[28px] font-medium">SocialFi</div>
                 <img class="w-[34px] mb-[19px]" src="~assets/imgs/fil.png" alt="" srcset="">
               </div>
               <div class="text-tip text-[14px] min-h-[160px]  leading-[20px] break-all px-[17px] box-border">
@@ -227,8 +222,7 @@
         <div class="md:mb-[174px] mb-[80px]">
           <div class="text-[28px] font-bold  text-white"> {{ $t('partner') }}</div>
           <div class="text-active text-[14px] mb-[22px]"><span>{{ $t('partnerDsc') }}</span></div>
-          <div
-            class="bg-card rounded-[16px] w-full h-auto overflow-hidden px-[26px] py-[34px] md:px-[55px] md:py-[81px] box-border grid  gap-[34px] md:-[80px]  grid-rows-5 md:grid-rows-2 grid-flow-col">
+          <div class="bg-card rounded-[16px] w-full h-auto overflow-hidden px-[26px] py-[34px] md:px-[55px] md:py-[81px] box-border grid  gap-[34px] md:gap-[80px] grid-rows-5 md:grid-rows-2  grid-flow-col">
 
             <a href="https://ipfs.tech/" target="_blank" rel="noopener noreferrer">
               <img class="h-[31px] md:h-[56px]" src="~assets/logos/ipfs.png" alt="" srcset="">

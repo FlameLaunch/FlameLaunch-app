@@ -18,9 +18,9 @@ export default {
     understand: "了解 Flame launch",
     viewBlogs: "浏览我们的博客",
     understandItem1: "如何参与Flame launch IDO？",
-    understandItem1Dsc: "快来Flame launch实现你加密世界的梦想吧！",
-    understandItem2: "如何创建令牌？",
-    understandItem3: "什么是IDO？",
+    understandItem1Dsc: "FLAME LAUNCH将会是filecion上第一个defi启动板。期待有更多的项目加入我们！",
+    understandItem2: "FLAME LAUNCH 简介？",
+    understandItem3: "初学者入门指南",
     bring:"我们为社区带来新技术",
     apply: "申请IDO",
     web3: `Web3是一个术语，用于描述万维网的第三个版本，它基于
@@ -31,7 +31,7 @@ export default {
     允许用户访问广泛的金融产品。DeFi是加密货币的一个快速增长的行业
     空间，特别侧重于开发新的金融产品和服务
     抵制审查、欺诈和其他形式的操纵。`,
-    metaverse: "Metaverse是一个具有新社会系统的数字生活空间，由人类使用数字技术构建，映射或超越现实世界并与之互动。",
+    metaverse: "SocialFi 是一款社交媒体管理工具，它可以帮助您快速，安全和有效地管理您的所有社交媒体帐户。它可以帮助您更轻松地发布，跟踪，分析和管理您的所有社交媒体活动。它可以让您在一个地方查看转发，评论，点赞和其他活动，帮助您更好地了解客户反馈，并有效地改善您的社交媒体策略。",
     partner: "合作伙伴",
     partnerDsc:"有最好的支持",
     block: "区块链创业神器",
@@ -49,4 +49,5 @@ export default {
     discord: "成为我们社区的一部分，聊天吧！",
     telegram: "与社区见面，并获得mods的实时支持。",
     withLaunch: "使用Flame Launch启动",
+    lang:"语言"
 }

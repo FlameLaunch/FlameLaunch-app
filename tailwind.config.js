@@ -9,7 +9,7 @@ module.exports = {
     './nuxt.config.{js,ts}',
   ],
   content: [
-    'node_modules/preline/dist/*.js',
+    "./node_modules/flowbite.{js,ts}"
 ],
   variants: {
     extend: {
@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
-    require('preline/plugin'),
+    require('flowbite')
     // ...
   ],
   theme: {
